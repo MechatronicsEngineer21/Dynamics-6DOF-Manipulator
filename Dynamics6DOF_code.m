@@ -3,10 +3,10 @@ alpha = [pi/2,0,0,pi/2,-pi/2,0];
 a = [0,0.410,.340,0,0,0];
 d = [0.179,0,0,0.188,0.132,0];
 
-% New Masses from link-1 to end-effector
+% Masses from link-1 to end-effector
 m = [4.043687892216430,4.088351020081470,2.975514330882000,2.005251413706830,1.580964077451070,0.312204788418883];
 
-% new Center of masses
+% Center of masses
 p_c1 = [5.62863246619805e-06,	-0.0712754141025166,	-0.00583821731829928];
 p_c2 = [0.266884576505637,	   6.57683680493905e-06,       0.145260394562513];
 p_c3 = [0.237472823221729,	  -2.00826081189764e-06,	  0.0376164502968732];
@@ -14,7 +14,7 @@ p_c4 = [-0.00183715117493422,	-0.0365459234829408,	   0.172476350166275];
 p_c5 = [0.00232838749144237,	 0.0384258837201684,	   0.123429863395004];
 p_c6 = [0.000634869947333528,	0.00391637711202809,	   0.120490768542163];
 
-% New Inertia matrix 
+% Inertia matrix 
 % [Ixx,Iyy, Izz Tyz, Ixz, Ixy]
 % 0.0256365144777215	0.00665469331160818	0.0250354565670247	-0.000723537076243379	1.82000648689342e-07	9.11011344785925e-07
 In_1= [0.0256365144777215, 9.11011344785925e-07,1.82000648689342e-07;
@@ -47,54 +47,6 @@ In_6= [0.00464887224718288, 1.01430408305949e-05, -2.44987020649305e-05;
 -2.44987020649305e-05, -0.000149950574946370, 0.000154844733533007];
 
 
-% % m = [1.002783283174190,7.129255629123710,0,0,0,0];
-%   m = [1.002783283174190,7.129255629123710,2.975514330882000,2.005251413706830,1.580964077451070,0.312204788340773];
-% p_c1 = [2.26972600493036e-05,-0.0417859535452176,-0.0235424035065753];
-% p_c2 = [0.153047931980937,3.77156029457426e-06,0.131500082460094];
-% p_c3 = [0.237472823221729,-2.00826081192540e-06,0.0376164502968731];
-% p_c4 = [-0.00183715117493422,-0.0365459234829415,-0.0155236498337255];
-% p_c5 = [0.00232838749144260,0.0384258837201675,-0.00857013660499554];
-% p_c6 = [0.000634869919279302,0.00391637713225371,0.0604907684898907];
-% % In_1 =[0.00331518363273528,-7.11247939113211e-07,4.91202948493625e-08;
-% %       -7.11247939113211e-07,0.00343794904876158,0.000959127816678477;
-% %       4.91202948493625e-08,0.000959127816678477,0.00285195381200962];
-% % In_2 =[0.008798516968015931,-3.17630185277309e-07,-0.000199845218908562;
-% %       -3.17630185277309e-07,0.0540673078770258,2.42181137393492e-07;
-% %       -0.000199845218908562,2.42181137393492e-07,0.0558284216214474];
-% % In_3 = [0.00375476526373238,-2.04252558426705e-06, 0.00068936893974575;
-% % -2.04252558426705e-06, 0.0266316099230738, 1.67092966847412e-07;
-% % 0.00068936893974575, 1.67092966847412e-07, 0.0268863205764393];
-% % In_4 = [0.00202409637239118, -2.67928735837058e-06, -2.65573419231737e-06;
-% % -2.67928735837058e-06 , 0.00236419542407041,0.000351952027865929;
-% % -2.65573419231737e-06, 0.000351952027865929, 0.00159410946326247];
-% % In_5 = [0.00136245831625395, -2.6392823477827e-06, 2.61497022743405e-06;
-% % -2.6392823477827e-06 , 0.00162012158741153, -0.000234139611985492;
-% % 2.61497022743405e-06, -0.000234139611985492 ,     0.00121067655274391];
-% % In_6 = [0.000111486628811693, 1.09193038353466e-05 , -6.1629458724809e-07;
-% % 1.09193038353466e-05, 0.000172207565589125, -2.62510398925112e-06 ;
-% % -6.1629458724809e-07, -2.62510398925112e-06, 0.000149930296390386];
-% % % 
-% 
-% % % [Ixx Iyy Izz Iyz Ixz Ixy]
-% In_1= [0.005621896725286, 2.398184548588576e-07, 5.849555913732314e-07;
-% 2.398184548588576e-07, 0.003993736948350, -2.735199453203301e-05;
-% 5.849555913732314e-07, -2.735199453203301e-05, 0.004602880038171];
-% In_2= [0.132079542334391, -4.432846871874034e-06, -0.143681929916598;
-% -4.432846871874034e-06, 0.344341660662974, -3.293647975906442e-06;
-% -0.143681929916598, -3.293647975906442e-06, 0.222821749243843];
-% In_3 = [0.007965110118047, -6.234808858793454e-07, -0.025890557357141;
-% -6.234808858793454e-07, 0.198641151365072, 3.918741592453996e-07;
-% -0.025890557357141, 3.918741592453996e-07, 0.194685517188124];
-% In_4= [0.005185552144181, -1.373126418345726e-04, -5.984408385336634e-05;
-% -1.373126418345726e-04, 0.002854196310572, -7.856794742902461e-04;
-% -5.984408385336634e-05, -7.856794742902461e-04, 0.004279100294659];
-% In_5= [0.003812945966380, -1.440886869544984e-04, 3.416247422247179e-05;
-% -1.440886869544984e-04, 0.001744810057866, 2.864956880365725e-04;
-% 3.416247422247179e-05, 2.864956880365725e-04, 0.003553617772753];
-% In_6= [0.001258674095338, 1.014304096110484e-05, -1.260613525563997e-05;
-% 1.014304096110484e-05, 0.001314732269203, -7.658787397898427e-05;
-% -1.260613525563997e-05, -7.658787397898427e-05, 1.548447337107339e-04];
-% 
 % %% PARAMETERs AND SYMBOLs
 g = 9.806650000000000;
 alpha_0=alpha(1);alpha_1=alpha(2);alpha_2=alpha(3);alpha_3=alpha(4);alpha_4=alpha(5);alpha_5=alpha(6);
@@ -143,16 +95,6 @@ R_40=R_30*R_4;
 R_50=R_40*R_5;
 R_60=R_50*R_6;
 
-% %% COMs' POSITION VECTORs
-% p_c1=p_1+R_1*[p_cx1;p_cy1;p_cz1];
-% p_c2=p_1+R_1*(p_2+R_2*[p_cx2;p_cy2;p_cz2]);
-% p_c1=[0;0;0]+[1 0 0;0 1 0;0 0 1]*[p_cx1;p_cy1;p_cz1];
-% p_c2=[0;0;0]+[1 0 0;0 1 0;0 0 1]*(p_1+R_1*[p_cx1;p_cy1;p_cz1]);
-% p_c3=p_1+R_1*(p_2+R_2*(p_3+R_3*[p_cx3;p_cy3;p_cz3]));
-% p_c4=p_1+R_1*(p_2+R_2*(p_3+R_3*(p_4+R_4*[p_cx4;p_cy4;p_cz4])));
-% p_c5=p_1+R_1*(p_2+R_2*(p_3+R_3*(p_4+R_4*(p_5+R_5*([p_cx5;p_cy5;p_cz5])))));
-% p_c6=p_1+R_1*(p_2+R_2*(p_3+R_3*(p_4+R_4*(p_5+R_5*(p_6+R_6*[p_cx6;p_cy6;p_cz6])))));
-%
 %% SYSTEM's STATEs
 q=[q_1;q_2;q_3;q_4;q_5;q_6];
 dq=[dq_1;dq_2;dq_3;dq_4;dq_5;dq_6];
@@ -206,38 +148,26 @@ jw6=[z0;z1;z2;z3;z4;z5]';
  
 j= [jw6;jv6];
 % ROBOT's INERTIA (MASS) MATRIX
-% M =  jv6'*m_6*jv6 + jw6'*R_60*In_6*R_60'*jw6 ...
-%     +jv5'*m_5*jv5 + jw5'*R_50*In_5*R_50'*jw5 ...
-%     +jv4'*m_4*jv4 + jw4'*R_40*In_4*R_40'*jw4 ...
-%     +jv3'*m_3*jv3 + jw3'*R_30*In_3*R_30'*jw3 ...
-%     +jv2'*m_2*jv2 + jw2'*R_20*In_2*R_20'*jw2 ...
-%     +jv1'*m_1*jv1 + jw1'* R_1*In_1* R_1'*jw1;
-% 
-q_val = [0.1; 0.2; 0.3; 0.4; 0.5; 0.6];  
-Jac_value=subs(j, q,q_val);
-Jac_value=double(Jac_value);
-% M_value=subs(M, q,q_val);
-% M_value=double(M_value);
-% % CORIOLIS and CENTRIFUGAL MATRIX
-% C = sym(zeros(6,6));
-% for k=1:6
-%    for s=1:6
-%       C(k,s)=.5*((diff(M(k,s),q_1)+diff(M(k,1),q(s,1))-diff(M(1,s),q(k,1)))*dq_1...
-%                 +(diff(M(k,s),q_2)+diff(M(k,2),q(s,1))-diff(M(2,s),q(k,1)))*dq_2...
-%                 +(diff(M(k,s),q_3)+diff(M(k,3),q(s,1))-diff(M(3,s),q(k,1)))*dq_3...
-%                 +(diff(M(k,s),q_4)+diff(M(k,4),q(s,1))-diff(M(4,s),q(k,1)))*dq_4...
-%                 +(diff(M(k,s),q_5)+diff(M(k,5),q(s,1))-diff(M(5,s),q(k,1)))*dq_5...
-%                 +(diff(M(k,s),q_6)+diff(M(k,6),q(s,1))-diff(M(6,s),q(k,1))))*dq_6;
-%    end
-% end
-% 
-% % q_val = [0.1;0.2;0.3;0.4;0.5;0.6];  
-% q_val=[0.1;0.4;0.7;0.5;0.8;0.6];
-% dq_val=[0.01; 0.02; 0.03; 0.04; 0.05; 0.06]; 
-% C_val=C*dq_val;
-% C_value=subs(C_val, q,q_val);
-% C_value=subs(C_value, dq,dq_val);
-% C_value=double(C_value);
+M =  jv6'*m_6*jv6 + jw6'*R_60*In_6*R_60'*jw6 ...
+    +jv5'*m_5*jv5 + jw5'*R_50*In_5*R_50'*jw5 ...
+    +jv4'*m_4*jv4 + jw4'*R_40*In_4*R_40'*jw4 ...
+    +jv3'*m_3*jv3 + jw3'*R_30*In_3*R_30'*jw3 ...
+    +jv2'*m_2*jv2 + jw2'*R_20*In_2*R_20'*jw2 ...
+    +jv1'*m_1*jv1 + jw1'* R_1*In_1* R_1'*jw1;
+
+
+% CORIOLIS and CENTRIFUGAL MATRIX
+C = sym(zeros(6,6));
+for k=1:6
+   for s=1:6
+      C(k,s)=.5*((diff(M(k,s),q_1)+diff(M(k,1),q(s,1))-diff(M(1,s),q(k,1)))*dq_1...
+                +(diff(M(k,s),q_2)+diff(M(k,2),q(s,1))-diff(M(2,s),q(k,1)))*dq_2...
+                +(diff(M(k,s),q_3)+diff(M(k,3),q(s,1))-diff(M(3,s),q(k,1)))*dq_3...
+                +(diff(M(k,s),q_4)+diff(M(k,4),q(s,1))-diff(M(4,s),q(k,1)))*dq_4...
+                +(diff(M(k,s),q_5)+diff(M(k,5),q(s,1))-diff(M(5,s),q(k,1)))*dq_5...
+                +(diff(M(k,s),q_6)+diff(M(k,6),q(s,1))-diff(M(6,s),q(k,1))))*dq_6;
+   end
+end
 
 %% POTENTIAL ENERGIES and GRAVITY VECTOR
 pc1_base = o0 + eye(3,3) * p_c1';
@@ -265,262 +195,42 @@ G6 = diff(U, q_6);
 % Assemble the gravity vector
 G = [G1; G2; G3; G4; G5; G6];
 
+
+q_val=   [0.1;0.2;0.3;0.4;0.5;0.6];
+dq_val = [0.01; 0.02; 0.03; 0.04; 0.05; 0.06];  
+ddq_val = [0.001; 0.002; 0.003; 0.004; 0.005; 0.006];
+
+% Numerical evaluation of Jacobian, Mass (M), Coriolis (C), and Gravity (G) 
+% matrices for torque computation at given joint positions and velocities
+Jac_value=subs(j, q,q_val);
+Jac_value=double(Jac_value);
+M_value=subs(M, q,q_val);
+M_value=double(M_value);
+C_val=C*dq_val;
+C_value=subs(C_val, q,q_val);
+C_value=subs(C_value, dq,dq_val);
+C_value=double(C_value);
 G_val = subs(G, q, q_val);
 G_val=double(G_val);
-% q_val=   [0.1;0.2;0.3;0.4;0.5;0.6];
-% dq_val = [0.01; 0.02; 0.03; 0.04; 0.05; 0.06];  
-% ddq_val = [0.001; 0.002; 0.003; 0.004; 0.005; 0.006];
-% % q_val = [0.1;0.2;0.3;0.4;0.5;0.6];
-% 
-% % torque = M_value*ddq_val + C_value + G_val;
-% torque = M*ddq + C*dq + G;
-% torque_val = subs(torque, q, q_val);
-% torque_val = subs(torque_val, dq, dq_val);
-% torque_val = subs(torque_val, ddq, ddq_val);
-% torque_val=double(torque_val);
-% 
-% %% Separate torques for each joint
-% tau1 = torque(1);
-% tau2 = torque(2);
-% tau3 = torque(3);
-% tau4 = torque(4);
-% tau5 = torque(5);
-% tau6 = torque(6);
-% 
+
+torque = M*ddq + C*dq + G;
+torque_val = subs(torque, q, q_val);
+torque_val = subs(torque_val, dq, dq_val);
+torque_val = subs(torque_val, ddq, ddq_val);
+torque_val=double(torque_val);
+
+%% Separate torques for each joint
+tau1 = torque(1);
+tau2 = torque(2);
+tau3 = torque(3);
+tau4 = torque(4);
+tau5 = torque(5);
+tau6 = torque(6);
+
+% You cam import six joint torques by the below six lines code 
 % matlabFunction(tau1,'File', 'torque1.m', 'Vars', {q,dq, ddq})
 % matlabFunction(tau2,'File', 'torque2.m', 'Vars', {q,dq, ddq})
 % matlabFunction(tau3,'File', 'torque3.m', 'Vars', {q,dq, ddq})
 % matlabFunction(tau4,'File', 'torque4.m', 'Vars', {q,dq, ddq})
 % matlabFunction(tau5,'File', 'torque5.m', 'Vars', {q,dq, ddq})
 % matlabFunction(tau6,'File', 'torque6.m', 'Vars', {q,dq, ddq})
-% 
-
-% q_val = [0.1;0.2;0;0;0;0]; 
-% dq_val=[0.01;0.02;0;0;0;0]; 
-% Jac_value=subs(j, q,q_val);
-% Jac_value=vpa(Jac_value,7);
-% display(Jac_value)
-%  M2_value=subs(M2, q,q_val);
-%  M2_value=double(M2_value);
-% %  C_val=C*dq;
-% C_value=subs(C_val, q,q_val);
-% C_value=subs(C_value, dq,dq_val);
-% C_value=double(C_value);
-
-% mddq= M*ddq;
-% Mddq_value=subs(mddq, q,q_val);
-% Mddq_value=subs(Mddq_value, ddq,ddq_val);
-% Mddq_value=double(Mddq_value);
-% Cdq=C*dq;
-% Cdq_value=subs(Cdq, q,q_val);
-% Cdq_value=subs(Cdq_value, dq,dq_val);
-% Cdq_value=double(Cdq_value);
-
-
-
-%% DH and Inertia Parameters 
-% alpha = [pi/2,0,0,pi/2,-pi/2,0];
-% a = [0,0.410,.340,0,0,0];
-% d = [.179,0,0,.188,.132,0];
-% m = [1.002783283174190,7.129255629123710,2.975514330882000,2.005251413706830,1.580964077451070,0.312204788340773];
-% % m = [6.69525342291522,1.002783283174190,7.129255629123710,2.975514330882000,2.005251413706830,1.580964077451070];
-% p_c1 = [2.26972600493036e-05,-0.0417859535452176,-0.0235424035065753];
-% p_c2 = [0.153047931980937,3.77156029457426e-06,0.131500082460094];
-% p_c3 = [0.237472823221729,-2.00826081192540e-06,0.0376164502968731];
-% p_c4 = [-0.00183715117493422,-0.0365459234829415,-0.0155236498337255];
-% p_c5 = [0.00232838749144260,0.0384258837201675,-0.00857013660499554];
-% p_c6 = [0.000634869919279302,0.00391637713225371,0.0604907684898907];
-% 
-% % [Ixx Iyy Izz Iyz Ixz Ixy]
-% In_1= [0.005621896725286, 2.398184548588576e-07, 5.849555913732314e-07;
-% 2.398184548588576e-07, 0.003993736948350, -2.735199453203301e-05;
-% 5.849555913732314e-07, -2.735199453203301e-05, 0.004602880038171];
-% In_2= [0.132079542334391, -4.432846871874034e-06, -0.143681929916598;
-% -4.432846871874034e-06, 0.344341660662974, -3.293647975906442e-06;
-% -0.143681929916598, -3.293647975906442e-06, 0.222821749243843];
-% In_3 = [0.007965110118047, -6.234808858793454e-07, -0.025890557357141;
-% -6.234808858793454e-07, 0.198641151365072, 3.918741592453996e-07;
-% -0.025890557357141, 3.918741592453996e-07, 0.194685517188124];
-% In_4= [0.005185552144181, -1.373126418345726e-04, -5.984408385336634e-05;
-% -1.373126418345726e-04, 0.002854196310572, -7.856794742902461e-04;
-% -5.984408385336634e-05, -7.856794742902461e-04, 0.004279100294659];
-% In_5= [0.003812945966380, -1.440886869544984e-04, 3.416247422247179e-05;
-% -1.440886869544984e-04, 0.001744810057866, 2.864956880365725e-04;
-% 3.416247422247179e-05, 2.864956880365725e-04, 0.003553617772753];
-% In_6= [0.001258674095338, 1.014304096110484e-05, -1.260613525563997e-05;
-% 1.014304096110484e-05, 0.001314732269203, -7.658787397898427e-05;
-% -1.260613525563997e-05, -7.658787397898427e-05, 1.548447337107339e-04];
-% 
-% %% PARAMETERs AND SYMBOLs
-% g = 9.806650000000000;
-% alpha_0=alpha(1);alpha_1=alpha(2);alpha_2=alpha(3);alpha_3=alpha(4);alpha_4=alpha(5);alpha_5=alpha(6);
-% a_0=a(1);a_1=a(2);a_2=a(3);a_3=a(4);a_4=a(5);a_5=a(6);
-% d_1=d(1);d_2=d(2);d_3=d(3);d_4=d(4);d_5=d(5);d_6=d(6);
-% p_cx1=p_c1(1);p_cy1=p_c1(2);p_cz1=p_c1(3);
-% p_cx2=p_c2(1);p_cy2=p_c2(2);p_cz2=p_c2(3);
-% p_cx3=p_c3(1);p_cy3=p_c3(2);p_cz3=p_c3(3);
-% p_cx4=p_c4(1);p_cy4=p_c4(2);p_cz4=p_c4(3);
-% p_cx5=p_c5(1);p_cy5=p_c5(2);p_cz5=p_c5(3);
-% p_cx6=p_c6(1);p_cy6=p_c6(2);p_cz6=p_c6(3);
-% m_1=m(1);m_2=m(2);m_3=m(3);m_4=m(4);m_5=m(5);m_6=m(6);
-% q_1=sym('q_1');q_2=sym('q_2');q_3=sym('q_3');q_4=sym('q_4');q_5=sym('q_5');q_6=sym('q_6');
-% dq_1=sym('dq_1');dq_2=sym('dq_2');dq_3=sym('dq_3');dq_4=sym('dq_4');dq_5=sym('dq_5');dq_6=sym('dq_6');
-% ddq_1=sym('ddq_1');ddq_2=sym('ddq_2');ddq_3=sym('ddq_3');ddq_4=sym('ddq_4');ddq_5=sym('ddq_5');ddq_6=sym('ddq_6');
-% %% ROTATION MATRICEs
-% R_1= [cos(q_1), -sin(q_1)*cos(alpha_0), sin(q_1)*sin(alpha_0) ;
-%       sin(q_1), cos(q_1)*cos(alpha_0), -cos(q_1)*sin(alpha_0);
-%       0,         sin(alpha_0),           cos(alpha_0)];
-% R_2= [cos(q_2), -sin(q_2)*cos(alpha_1), sin(q_2)*sin(alpha_1) ;
-%       sin(q_2), cos(q_2)*cos(alpha_1), -cos(q_2)*sin(alpha_1);
-%       0,         sin(alpha_1),           cos(alpha_1)];
-% R_3=[cos(q_3), -sin(q_3)*cos(alpha_2), sin(q_3)*sin(alpha_2) ;
-%       sin(q_3), cos(q_3)*cos(alpha_2), -cos(q_3)*sin(alpha_2);
-%       0,         sin(alpha_2),           cos(alpha_2)];
-% R_4=[cos(q_4), -sin(q_4)*cos(alpha_3), sin(q_4)*sin(alpha_3) ;
-%       sin(q_4), cos(q_4)*cos(alpha_3), -cos(q_4)*sin(alpha_3);
-%       0,         sin(alpha_3),           cos(alpha_3)];
-% R_5= [cos(q_5), -sin(q_5)*cos(alpha_4), sin(q_5)*sin(alpha_4) ;
-%       sin(q_5), cos(q_5)*cos(alpha_4), -cos(q_5)*sin(alpha_4);
-%       0,         sin(alpha_4),           cos(alpha_4)];
-% R_6=[cos(q_6), -sin(q_6)*cos(alpha_5), sin(q_6)*sin(alpha_5) ;
-%       sin(q_6), cos(q_6)*cos(alpha_5), -cos(q_6)*sin(alpha_5);
-%       0,         sin(alpha_5),           cos(alpha_5)];
-% R_1=[1 0 0;0 1 0;0 0 1]*R_1;
-% R_20=R_1*R_2;
-% R_30=R_20*R_3;
-% R_40=R_30*R_4;
-% R_50=R_40*R_5;
-% R_60=R_50*R_6;
-% %% POSITION VECTORs
-% p_1=[a_0*cos(q_1);a_0*sin(q_1);d_1];
-% p_2=[a_1*cos(q_2);a_1*sin(q_2);d_2];
-% p_3=[a_2*cos(q_3);a_2*sin(q_3);d_3];
-% p_4=[a_3*cos(q_4);a_3*sin(q_4);d_4];
-% p_5=[a_4*cos(q_5);a_4*sin(q_5);d_5];
-% p_6=[a_5*cos(q_6);a_5*sin(q_6);d_6];
-% % %% COMs' POSITION VECTORs
-% % p_c1=p_1+R_1*[p_cx1;p_cy1;p_cz1];
-% % p_c2=p_1+R_1*(p_2+R_2*[p_cx2;p_cy2;p_cz2]);
-% % p_c3=p_1+R_1*(p_2+R_2*(p_3+R_3*[p_cx3;p_cy3;p_cz3]));
-% % p_c4=p_1+R_1*(p_2+R_2*(p_3+R_3*(p_4+R_4*[p_cx4;p_cy4;p_cz4])));
-% % p_c5=p_1+R_1*(p_2+R_2*(p_3+R_3*(p_4+R_4*(p_5+R_5*([p_cx5;p_cy5;p_cz5])))));
-% % p_c6=p_1+R_1*(p_2+R_2*(p_3+R_3*(p_4+R_4*(p_5+R_5*(p_6+R_6*[p_cx6;p_cy6;p_cz6])))));
-% %
-% %% SYSTEM's STATEs
-% q=[q_1;q_2;q_3;q_4;q_5;q_6];
-% dq=[dq_1;dq_2;dq_3;dq_4;dq_5;dq_6];
-% ddq=[ddq_1;ddq_2;ddq_3;ddq_4;ddq_5;ddq_6];
-% A1 = [[R_1,p_1]; 0 0 0 1];
-% A2=[[R_2,p_2];0,0,0,1];
-% A3=[[R_3,p_3];0,0,0,1];
-% A4=[[R_4,p_4];0,0,0,1];
-% A5=[[R_5,p_5];0,0,0,1];
-% A6=[[R_6,p_6];0,0,0,1];
-% t12=(A1*A2);
-% t13=(t12*A3);
-% t14=(t13*A4);
-% t15=(t14*A5);
-% t16=(t15*A6);
-% z0=[0 0 1];
-% z1=A1(1:3,3)';
-% z2=t12(1:3,3)';
-% z3=t13(1:3,3)';
-% z4=t14(1:3,3)';
-% z5=t15(1:3,3)';
-% o0=[0 0 0];
-% o1=A1(1:3,4)';
-% o2=t12(1:3,4)';
-% o3=t13(1:3,4)';
-% o4=t14(1:3,4)';
-% o5=t15(1:3,4)';
-% o6=t16(1:3,4)';
-% jv1=[zeros(6,3)]';
-% jw1=[z0;zeros(5,3)]';
-% %----------------second link-------------- 
-% jv2=[cross(z0,(o1-o0));zeros(5,3)]';
-% % jv2=[cross(z0,(o2-o0));cross(z1,(o2-o1));zeros(4,3)]';
-% jw2=[z0;z1;zeros(4,3)]';
-% %----------------third link--------------
-% jv3=[cross(z0,(o2-o0));cross(z1,(o2-o1));zeros(4,3)]';
-% % jv3=[cross(z0,(o3-o0));cross(z1,(o3-o1));cross(z2,(o3-o2));zeros(3,3)]';
-% jw3=[z0;z1;z2;zeros(3,3)]';
-% %----------------fourth link--------------
-% jv4=[cross(z0,(o3-o0));cross(z1,(o3-o1));cross(z2,(o3-o2));zeros(3,3)]';
-% % jv4=[cross(z0,(o4-o0));cross(z1,(o4-o1));cross(z2,(o4-o2));cross(z3,(o4-o3));zeros(2,3)]';
-% jw4=[z0;z1;z2;z3;zeros(2,3)]';
-% %----------------fifth link--------------
-% jv5=[cross(z0,(o4-o0));cross(z1,(o4-o1));cross(z2,(o4-o2));...
-%     cross(z3,(o4-o3));zeros(2,3)]';
-% % jv5=[cross(z0,(o5-o0));cross(z1,(o5-o1));cross(z2,(o5-o2));...
-%     % % cross(z3,(o5-o3));cross(z4,(o5-o4));zeros(1,3)]';
-% jw5=[z0;z1;z2;z3;z4;zeros(1,3)]';
-% %----------------sixth link--------------
-% jv6=[cross(z0,(o5-o0));cross(z1,(o5-o1));...
-%     cross(z2,(o5-o2));cross(z3,(o5-o3));cross(z4,(o5-o4));zeros(1,3)]';
-% % jv6=[cross(z0,(o6-o0));cross(z1,(o6-o1));...
-% %     cross(z2,(o6-o2));cross(z3,(o6-o3));cross(z4,(o6-o4));cross(z5,(o6-o5))]';
-% 
-% jw6=[z0;z1;z2;z3;z4;z5]';
-% j=[jw6;jv6];
-
-% ROBOT's INERTIA (MASS) MATRIX
-
-% M =  jv6.'*m_6*jv6 +jw6.'*R_60*In_6*R_60.'*jw6 ...
-%     +jv5.'*m_5*jv5 +jw5.'*R_50*In_5*R_50.'*jw5 ...
-%     +jv4.'*m_4*jv4 +jw4.'*R_40*In_4*R_40.'*jw4 ...
-%     +jv3.'*m_3*jv3+ jw3.'*R_30*In_3*R_30.'*jw3 ...
-%     +jv2.'*m_2*jv2 +jw2.'*R_20*In_2*R_20.'*jw2 ...
-%     +jv1.'*m_1*jv1+jw1.'*R_1*In_1*R_1.'*jw1;
-% 
-% q_val = [0.1; 0.2; 0.3; 0.4; 0.5; 0.6];  
-% Jac_value=subs(j, q,q_val);
-% Jac_value=double(Jac_value);
-% M_value=subs(M, q,q_val);
-% M_value=double(M_value);
-% % CORIOLIS and CENTRIFUGAL MATRIX
-% for k=1:6
-%    for s=1:6
-%       C(k,s)=.5*((diff(M(k,s),q_1)+diff(M(k,1),q(s,1))-diff(M(1,s),q(k,1)))*dq_1...
-%                 +(diff(M(k,s),q_2)+diff(M(k,2),q(s,1))-diff(M(2,s),q(k,1)))*dq_2...
-%                 +(diff(M(k,s),q_3)+diff(M(k,3),q(s,1))-diff(M(3,s),q(k,1)))*dq_3...
-%                 +(diff(M(k,s),q_4)+diff(M(k,4),q(s,1))-diff(M(4,s),q(k,1)))*dq_4...
-%                 +(diff(M(k,s),q_5)+diff(M(k,5),q(s,1))-diff(M(5,s),q(k,1)))*dq_5...
-%                 +(diff(M(k,s),q_6)+diff(M(k,6),q(s,1))-diff(M(6,s),q(k,1))))*dq_6;
-%    end
-% end
-% q_val = [0.1; 0.2; 0.3; 0.4; 0.5; 0.6]; 
-% dq_val=[0.01; 0.02; 0.03; 0.04; 0.05; 0.06]; 
-% C_val=C*dq;
-% C_value=subs(C_val, q,q_val);
-% C_value=subs(C_value, dq,dq_val);
-% C_value=double(C_value);
-% M_value=double(M_value);
-% % POTENTIAL ENERGIES and GRAVITY VECTOR
-% P1=m_1*[0,0,g]*p_c1;
-% P2=m_2*[0,0,g]*p_c2;
-% P3=m_3*[0,0,g]*p_c3;
-% P4=m_4*[0,0,g]*p_c4;
-% P5=m_5*[0,0,g]*p_c5;
-% P6=m_6*[0,0,g]*p_c6;
-% P=P1+P2+P3+P4+P5+P6;
-% g_1=diff(P,q_1);
-% g_2=diff(P,q_2);
-% g_3=diff(P,q_3);
-% g_4=diff(P,q_4);
-% g_5=diff(P,q_5);
-% g_6=diff(P,q_6);
-% G=[g_1;g_2;g_3;g_4;g_5;g_6];
-% 
-% % 
-% % torque =M* ddq + C*dq + G; 
-% q_val = [0.1; 0.2; 0.3; 0.4; 0.5; 0.6]; 
-% G_val = subs(G, q, q_val);
-% G_val=double(G_val);
-% dq_val = [0.01; 0.02; 0.03; 0.04; 0.05; 0.06];  
-% ddq_val = [0.001; 0.002; 0.003; 0.004; 0.005; 0.006]; 
-% 
-% torque_val = subs(torque, q, q_val);
-% torque_val = subs(torque_val, dq, dq_val);
-% torque_val = subs(torque_val, ddq, ddq_val);
-% torque_val=double(torque_val);
-% % plot(torque_val);
