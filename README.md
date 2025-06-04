@@ -1,4 +1,5 @@
 # Dynamics-6DOF-Manipulator
+This is the dynamic model of 6-DOF Robot.
 
 ![Dexter6-Pro(6DOF_RoboticArm)](https://github.com/user-attachments/assets/4c285935-e235-4d78-8fff-b292335bcb67)
 
@@ -14,7 +15,6 @@ This project involves:
 - Validation of the dynamic model in MATLAB/Simulink
 - Comparison between built-in and custom dynamic models
 - Simulation of individual and combined DOFs for torque, velocity, and position analysis
-- Real-time inverse kinematics implementation in TwinCAT for eRob rotary actuators
 
 ---
 
