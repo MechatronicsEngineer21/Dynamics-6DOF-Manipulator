@@ -1,6 +1,6 @@
 Modeling and Simulation of Dexter-6 Pro
 
-This repository contains the complete MATLAB-based modeling and simulation framework for Dexter-6, a 6-DOF lightweight robotic manipulator.
+This repository contains the complete MATLAB-based modeling and simulation framework for Dexter-6 Pro, a 6-DOF lightweight robotic manipulator.
 
 ![Dexter6-Pro(6DOF_RoboticArm)](https://github.com/user-attachments/assets/4c285935-e235-4d78-8fff-b292335bcb67)
 
